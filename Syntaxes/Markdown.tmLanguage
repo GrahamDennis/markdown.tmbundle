@@ -382,6 +382,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#math</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#ampersand</string>
 				</dict>
 				<dict>
@@ -519,6 +523,10 @@
 									<string>text.html.basic</string>
 								</dict>
 							</array>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#math</string>
 						</dict>
 						<dict>
 							<key>include</key>
@@ -804,6 +812,10 @@
 						</dict>
 						<dict>
 							<key>include</key>
+							<string>#math</string>
+						</dict>
+						<dict>
+							<key>include</key>
 							<string>#escape</string>
 						</dict>
 						<dict>
@@ -1074,6 +1086,38 @@
 					<string>(\[)((?&lt;square&gt;[^\[\]\\]|\\.|\[\g&lt;square&gt;*+\])*+)(\])[ ]?(\[)(\])</string>
 					<key>name</key>
 					<string>meta.link.reference.literal.markdown</string>
+				</dict>
+				<key>math</key>
+				<dict>
+					<key>begin</key>
+					<string>\\\\[\(\[]</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.math.begin.markdown</string>
+						</dict>
+					</dict>
+					<key>contentName</key>
+					<string>text.tex.latex.math</string>
+					<key>end</key>
+					<string>\\\\[\)\]]</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.math.end.markdown</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>text.tex.latex</string>
+						</dict>
+					</array>
 				</dict>
 				<key>raw</key>
 				<dict>
